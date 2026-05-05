@@ -1,0 +1,46 @@
+<!doctype html>
+<script src="script.js"></script>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabela Periódica v2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="img/imagem_TESTE.png"
+        alt="Logo da Tabela Periódica"
+        class="header-logo"
+      />
+      <input type="text" id="busca" placeholder="Buscar elemento..." />
+    </header>
+
+    <main>
+      <div id="tabela"></div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button id="fechar">X</button>
+
+        <!-- Nova div para organizar em colunas -->
+        <div class="modal-corpo">
+          <!-- Coluna do Texto -->
+          <div class="modal-texto">
+            <h2 id="nome">Hélio</h2>
+            <p><strong>Símbolo:</strong> <span id="simbolo">He</span></p>
+            <p><strong>Número Atômico:</strong> <span id="numero">2</span></p>
+            <p><strong>Massa:</strong> <span id="massa">4.0026</span></p>
+          </div>
+
+          <!-- Coluna da Imagem -->
+          <img id="foto" src="img/oi.png" alt="Imagem do elemento" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

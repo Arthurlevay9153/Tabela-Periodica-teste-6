@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #13001b;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center;     /* Centraliza a imagem verticalmente */
+  padding: 10px 0;
+}
+
+.header-logo {
+  max-height: 200px; /* Controla a altura da imagem no cabeçalho */
+  margin-top: 0px;
+  padding: 10px;     
+  width: auto;             /* Mantém a proporção da imagem */
+  object-fit: contain;
+}
+
+#busca {
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 15px;
+  border: 3px solid rgb(78, 1, 78);;
+  font-family:'Calisto M','Bookman Old Styl', Georgia, serif;
+}
+
+#tabela {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
+  padding: 40px;
+}
+
+/*CSS dos botões dos elementos*/
+.elemento {
+  background: #36002b;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  text-align: center;
+}
+
+/* Cor para os primeiros 5 elementos */
+.grupo-1 {
+  background: #36002b; 
+}
+
+/* Cor para os 5 elementos restantes (ex: um tom de azul escuro) */
+.grupo-2 {
+  background: #002244; 
+}
+
+/*Fazer o botão ficar verde*/
+.elemento:hover {
+  background: #3cca70;
+  color: black;
+  transform: scale(1.05);
+}
+
+.numero {
+  font-size: 15px;
+  text-align: left;
+}
+
+.simbolo {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Modal */
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal.ativo {
+  display: flex;
+}
+
+/*aqui são o CSS da informação que aparece de cada elemento*/
+.modal-content {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  position: relative;
+  font-size: 20px;
+  font-family: "Candara", "Calibri", "Optima", Arial, sans-serif;
+}
+
+/* Alinha o texto e a imagem lado a lado */
+.modal-corpo {
+  display: flex;
+  align-items: center;       /* Alinha verticalmente ao centro */
+  justify-content: space-between; /* Afasta o texto da imagem */
+  gap: 10px;                 /* Espaço entre o texto e a imagem */
+  margin-top: 15px;
+}
+
+/* Ajusta o tamanho da imagem se necessário */
+#foto {
+  max-width: 150px;          /* Define uma largura máxima para a imagem */
+  height: auto;
+  object-fit: contain;
+  
+}
+
+#fechar {
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
